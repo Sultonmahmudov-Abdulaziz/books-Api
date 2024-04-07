@@ -1,9 +1,11 @@
 from django.urls import path
-from .views import BooksApiView
-
+from .views import BooksApiView, BooksDetailApiView, ReviewsApiView
 
 app_name = 'api'
 
 urlpatterns = [
-    path('api/', BooksApiView.as_view(), name='api'),
+    path('places-list/', BooksApiView.as_view(), name="places"),
+    path('place-detail/<int:id>/', BooksDetailApiView.as_view(), name="place_detail"),
+    path('reviews/', ReviewsApiView.as_view(), name="reviews"),
+
 ]
