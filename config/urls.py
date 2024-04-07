@@ -25,8 +25,11 @@ urlpatterns = [
     path('',landing_page, name='landing_page'),
     path('books/', include('books.urls')),
     path('users/', include('users.urls')),
+    path('api/', include('api.urls')),  
 ]
+
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
 
 
 
